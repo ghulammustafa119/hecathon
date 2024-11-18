@@ -1,0 +1,194 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Container */
+.resume-div {
+    background-color: #fff;
+    max-width: 800px;
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+}
+
+header img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+header h1, header p {
+    margin: 0;
+    text-align: left;
+}
+
+.white {
+    color: #fff;
+}
+
+/* Content Layout */
+.content {
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    gap: 20px;
+}
+
+/* Sidebar (Aside) */
+aside {
+    flex: 1;
+    padding-right: 20px;
+}
+
+aside h2 {
+    color: #333;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+#skillH2 {
+    margin-top: 10px;
+}
+
+aside p, aside ul {
+    margin-bottom: 10px;
+}
+
+.contact p, .skill ul li {
+    margin-bottom: 5px;
+}
+
+.skill ul li {
+    list-style: none;
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    margin-left: 0;
+}
+
+.main-content h2 {
+    color: #333;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.education, .experience, .language {
+    margin-bottom: 20px;
+}
+
+.experience ul {
+    margin-top: 10px;
+    list-style-type: none;
+}
+
+/* Button Styling */
+#downloadBtn,#editBtn,#shareLink {
+    background-color: #2980b9;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+#downloadBtn:hover,#editBtn:hover,#shareLink:hover {
+    transition: background-color 0.3s ease, transform 0.2s ease;
+
+}
+
+#downloadBtn:active,#editBtn:active,#shareLink:active {
+    transition: background-color 0.3s ease, transform 0.2s ease;
+
+}
+
+/* Responsive Design */
+@media print {
+    #downloadBtn,#editBtn,#shareLink{
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    aside, .main-content {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header img {
+        margin: 10px 0;
+    }
+
+    #downloadBtn,#editBtn,#shareLink {
+        align-self: center;
+    }
+
+    header img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 50%;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    aside h2, .main-content h2 {
+        font-size: 1.1rem;
+    }
+
+    #downloadBtn,#editBtn,#shareLink {
+        padding: 8px 12px;
+    }
+
+    header img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 50%;
+    }
+}
