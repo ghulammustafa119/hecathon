@@ -132,9 +132,21 @@ form {
     margin-bottom: 20px;
 }
 
+.gender {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
 .gender p {
-    margin-bottom: 5px;
+    margin: 0;
     font-weight: bold;
+}
+
+.gender .input {
+    width: auto;
+    margin: 0;
 }
 
 .btn-div {
