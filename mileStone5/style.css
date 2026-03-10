@@ -137,6 +137,7 @@ form {
     align-items: center;
     gap: 10px;
     margin-bottom: 15px;
+    flex-wrap: wrap;
 }
 
 .gender p {
@@ -144,9 +145,15 @@ form {
     font-weight: bold;
 }
 
+.gender .label {
+    display: inline;
+    margin: 0;
+}
+
 .gender .input {
     width: auto;
     margin: 0;
+    padding: 0;
 }
 
 .btn-div {
