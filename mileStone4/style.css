@@ -133,27 +133,29 @@ form {
 }
 
 .gender {
-    display: flex;
-    align-items: center;
-    gap: 10px;
     margin-bottom: 15px;
-    flex-wrap: wrap;
 }
 
 .gender p {
-    margin: 0;
     font-weight: bold;
+    margin-bottom: 8px;
 }
 
-.gender .label {
-    display: inline;
-    margin: 0;
+.gender label {
+    margin-right: 15px;
+    cursor: pointer;
 }
 
-.gender .input {
-    width: auto;
-    margin: 0;
-    padding: 0;
+.gender input[type="radio"] {
+    margin-right: 4px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.gender-options {
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }
 
 .btn-div {
