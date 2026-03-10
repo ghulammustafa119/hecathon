@@ -109,6 +109,21 @@ aside p, aside ul {
     list-style-type: none;
 }
 
+/* Editable State */
+.editing-mode .editable {
+    border: 1px dashed #3498db;
+    padding: 2px 4px;
+    background-color: #eaf6ff;
+    border-radius: 3px;
+    min-width: 20px;
+    display: inline-block;
+}
+
+.editing-mode .editable:focus {
+    outline: 2px solid #2980b9;
+    background-color: #fff;
+}
+
 /* Button Styling */
 #editBtn{
     background-color: #2980b9;

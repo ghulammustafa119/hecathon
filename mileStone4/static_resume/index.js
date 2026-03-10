@@ -75,10 +75,66 @@ window.addEventListener('load', () => {
     const resImg = document.getElementById('resImg');
     if (resImg && picture)
         resImg.src = picture;
-    // edit functionality
+    // Edit/Save toggle functionality
+    let isEditing = false;
     const editBtn = document.getElementById('editBtn');
+    const editableElements = document.querySelectorAll('.editable');
+    // Mapping from span IDs to localStorage keys
+    const idToStorageKey = {
+        'resName': 'name',
+        'resFname': 'f-name',
+        'resDesig': 'desig',
+        'resDb': 'd-birth',
+        'resGender': 'gender',
+        'resDomicyle': 'domicyle',
+        'resPhone': 'phone',
+        'resEmail': 'email',
+        'resAddress': 'add',
+        'resPass': 'pass1',
+        'resDeg': 'deg1',
+        'resInst': 'uni1',
+        'resPass2': 'pass2',
+        'resDeg2': 'deg2',
+        'resInst2': 'uni2',
+        'resSkill1': 'skill-1',
+        'resSkill2': 'skill-2',
+        'resSkill3': 'skill-3',
+        'resSkill4': 'skill-4',
+        'resSkill5': 'skill-5',
+        'resStartYear': 'st-year',
+        'resEndYear': 'end-year',
+        'resCompany': 'company',
+        'resCompanyLocation': 'com-location',
+        'resJobTitle': 'job-title',
+        'resAchv1': 'achv-1',
+        'resAchv2': 'achv-2',
+        'resAchv3': 'achv-3',
+        'resLang1': 'lang-1',
+        'resLang2': 'lang-2'
+    };
     editBtn?.addEventListener('click', () => {
-        // const editPageUrl = `${window.location.origin}back`;
-        window.history.back();
+        if (!isEditing) {
+            // Enable editing
+            editableElements.forEach((el) => {
+                el.contentEditable = 'true';
+            });
+            editBtn.textContent = 'Save';
+            document.body.classList.add('editing-mode');
+            isEditing = true;
+        }
+        else {
+            // Save changes - update localStorage with edited content
+            editableElements.forEach((el) => {
+                const id = el.id;
+                const storageKey = idToStorageKey[id];
+                if (storageKey) {
+                    localStorage.setItem(storageKey, el.textContent || '');
+                }
+                el.contentEditable = 'false';
+            });
+            editBtn.textContent = 'Edit';
+            document.body.classList.remove('editing-mode');
+            isEditing = false;
+        }
     });
 });
