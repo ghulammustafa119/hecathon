@@ -40,10 +40,10 @@ A step-by-step interactive resume builder built with **HTML**, **CSS**, and **Ty
 ```
 
 ## Live Demo (Vercel)
-- **Milestone 1-2:** https://milestone1-2-cll8qmfy9-ghulammustafabhutto-s-projects.vercel.app
-- **Milestone 3:** https://milestone3-fbjsfhiby-ghulammustafabhutto-s-projects.vercel.app
-- **Milestone 4:** https://milestone4-c628i0scz-ghulammustafabhutto-s-projects.vercel.app
-- **Milestone 5:** https://milestone5-ehmi1uhjb-ghulammustafabhutto-s-projects.vercel.app
+- **Milestone 1-2:** https://milestone1-2-ghulammustafabhutto-s-projects.vercel.app
+- **Milestone 3:** https://milestone3-ghulammustafabhutto-s-projects.vercel.app
+- **Milestone 4:** https://milestone4-ghulammustafabhutto-s-projects.vercel.app
+- **Milestone 5:** https://milestone5-ghulammustafabhutto-s-projects.vercel.app
 
 ## How to Run
 1. Clone the repository
